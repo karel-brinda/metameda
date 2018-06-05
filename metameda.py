@@ -114,7 +114,7 @@ def summary(query,keyword):
 				""".format(pmid=pmid)
 			)
 
-		sentences=list(map(str.strip,sentences))
+		sentences=list(filter(lambda x: len(x)>0, map(str.strip,sentences)))
 
 		# correction for abbreviations
 		j=0
